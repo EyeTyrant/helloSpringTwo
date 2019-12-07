@@ -14,15 +14,15 @@ public class HelloControllerExercise {
                         @RequestParam(defaultValue = "en") String lang){
 
     if ("fr".equals(lang)){
-      return "Bonj " + name + "!";
+      return "<h1 style=\"text-align: center;color: red\">Bonj " + name + "!</h1>";
     } else if ("de".equals(lang)){
-      return "Hallo " + name + "!";
+      return "<h1 style=\"text-align: center;color: gold\">Hallo " + name + "!</h1>";
     } else if ("sp".equals(lang)){
-      return "Hola " + name + "!";
+      return "<h1 style=\"text-align: center;color: orange\">Hola " + name + "!</h1>";
     } else if ("itl".equals(lang)){
-      return "Ciao " + name + "!";
+      return "<h1 style=\"text-align: center;color: green\">Ciao " + name + "!</h1>";
     } else {
-      return "Hiya " + name + "!";
+      return "<h1 style=\"text-align: center;color blue\">Hiya " + name + "!</h1>";
     }
   }
 
