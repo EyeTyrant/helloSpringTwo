@@ -5,7 +5,10 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @ResponseBody // can be placed before the class if every method in the class will have a @ResponseBody
-@RequestMapping("hello") // makes /hello root in path for all methods in the class when @ReauestMapping is placed before the class
+@RequestMapping("hello") /* makes /hello root in path for all methods in the class when @RequestMapping is placed before the class
+                            @RequestMapping can be used on the class.
+                            @GetMapping and @PostMapping cannot be applied at the class level. */
+
 public class HelloController {
 /*
  For every GET request made to the provided path, the controller method will be called.
