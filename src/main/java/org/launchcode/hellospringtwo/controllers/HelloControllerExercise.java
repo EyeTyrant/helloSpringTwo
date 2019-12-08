@@ -38,7 +38,7 @@ public class HelloControllerExercise {
               "<option value='fr'>French</option>" +
               "<option value='de'>German</option>" +
               "<option value='sp'>Spanish</option>" +
-              "<option value='itl'>Itallian</option>" +
+              "<option value='itl'>Italian</option>" +
             "</select>" +
             "<input type='submit' value='Greetings'>" +
           "</form>" +
