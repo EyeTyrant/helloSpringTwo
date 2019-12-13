@@ -58,5 +58,13 @@ public class HelloController {
         "</body>" +
       "</html>";
   }
+  
+  
+  // lives at /hello/formThyme
+  @GetMapping("formThyme")
+  // @ResponseBody not needed when using templates
+  public String helloFormThyme(){
+    return "form";  // return the name of the template, extension not needed, Thymeleaf knows it's a template
+  }
 
 }
