@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@ResponseBody // can be placed before the class if every method in the class will have a @ResponseBody
+//@ResponseBody // can be placed before the class if every method in the class will have a @ResponseBody
 @RequestMapping("hello") /* makes /hello root in path for all methods in the class when @RequestMapping is placed before the class
                             @RequestMapping can be used on the class.
                             @GetMapping and @PostMapping cannot be applied at the class level. */
@@ -30,6 +30,7 @@ public class HelloController {
 
   // @RequestMapping can handle more than one method i.e. GET and POST at the same path
   // @RequestParam Handles request formatted as localhost:8080/hello/helloName?aName=aName
+  @ResponseBody
   @RequestMapping(method = {RequestMethod.GET, RequestMethod.POST}, value = "helloName")
   public String helloWithQueryParam(@RequestParam String aName){
     return "Hello " + aName + "!";
@@ -47,6 +48,7 @@ public class HelloController {
 
   // lives at /hello/form
   @GetMapping("form")
+  @ResponseBody
   public String helloForm(){
     return
       "<html>" +
