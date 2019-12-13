@@ -30,8 +30,8 @@ public class HelloController {
 
   // @RequestMapping can handle more than one method i.e. GET and POST at the same path
   // @RequestParam Handles request formatted as localhost:8080/hello/helloName?aName=aName
-  @ResponseBody
   @RequestMapping(method = {RequestMethod.GET, RequestMethod.POST}, value = "helloName")
+  @ResponseBody
   public String helloWithQueryParam(@RequestParam String aName){
     return "Hello " + aName + "!";
   }
